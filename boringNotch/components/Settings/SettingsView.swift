@@ -312,13 +312,14 @@ struct Charge: View {
                 Defaults.Toggle("Show charging indicator", key: .chargingInfoAllowed)
                 Defaults.Toggle("Show battery indicator", key: .showBattery)
             } header: {
-                Text("General")
+                Text("Battery")
             }
         }
         .tint(Defaults[.accentColor])
         .navigationTitle("Battery")
     }
 }
+
 
 struct Downloads: View {
     @Default(.selectedDownloadIndicatorStyle) var selectedDownloadIndicatorStyle
@@ -933,6 +934,7 @@ struct Appearance: View {
                 Defaults.Toggle("Show calendar", key: .showCalendar)
                 Defaults.Toggle("Show cool face animation while inactivity", key: .showNotHumanFace)
                     .disabled(true)
+                Defaults.Toggle("Show time", key: .showTime)
             } header: {
                 HStack {
                     Text("Additional features")

@@ -14,7 +14,7 @@ let playerWidth: CGFloat = 440
 let downloadSneakSize: CGSize = .init(width: 65, height: 1)
 let batterySneakSize: CGSize = .init(width: 160, height: 1)
 
-let openNotchSize: CGSize = .init(width: 580, height: 175)
+let openNotchSize: CGSize = .init(width: 700, height: 175)
 let cornerRadiusInsets:  (opened: CGFloat, closed: CGFloat) = (opened: 24, closed: 10)
 
 struct MusicPlayerImageSizes {

@@ -60,7 +60,7 @@ struct BoringBatteryView: View {
     var body: some View {
         HStack {
             Text("\(Int32(batteryPercentage))%")
-                .font(.callout)
+                .font(.caption)
                 .foregroundStyle(.white)
             BatteryView(percentage: batteryPercentage, isCharging: isPluggedIn, isInLowPowerMode: isInLowPowerMode, batteryWidth: batteryWidth)
         }

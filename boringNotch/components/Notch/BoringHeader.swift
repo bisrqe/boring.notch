@@ -40,11 +40,21 @@ struct BoringHeader: View {
             
             HStack(spacing: 4) {
                 if vm.notchState == .open {
+                    if Defaults[.showBattery] {
+                        BoringBatteryView(
+                            batteryPercentage: batteryModel.batteryPercentage,
+                            isPluggedIn: batteryModel.isPluggedIn, batteryWidth: 30,
+                            isInLowPowerMode: batteryModel.isInLowPowerMode
+                        )
+                    }
+                    if Defaults[.showTime]{
+                        BoringTime().frame(width: 60, height: 30, alignment: .trailing)
+                    }
                     if Defaults[.settingsIconInNotch] {
                         SettingsLink(label: {
                             Capsule()
                                 .fill(.black)
-                                .frame(width: 30, height: 30)
+                                .frame(width: 30, height: 30, alignment: .center)
                                 .overlay {
                                     Image(systemName: "gear")
                                         .foregroundColor(.white)
@@ -53,13 +63,6 @@ struct BoringHeader: View {
                                 }
                         })
                         .buttonStyle(PlainButtonStyle())
-                    }
-                    if Defaults[.showBattery] {
-                        BoringBatteryView(
-                            batteryPercentage: batteryModel.batteryPercentage,
-                            isPluggedIn: batteryModel.isPluggedIn, batteryWidth: 30,
-                            isInLowPowerMode: batteryModel.isInLowPowerMode
-                        )
                     }
                 }
             }

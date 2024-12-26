@@ -84,6 +84,9 @@ extension Defaults.Keys {
     static let chargingInfoAllowed = Key<Bool>("chargingInfoAllowed", default: true)
     static let showBattery = Key<Bool>("showBattery", default: true)
     
+    // MARK: Time
+    static let showTime = Key<Bool>("showTime", default: true)
+    
     // MARK: Downloads
     static let enableDownloadListener = Key<Bool>("enableDownloadListener", default: true)
     static let enableSafariDownloads = Key<Bool>("enableSafariDownloads", default: true)
